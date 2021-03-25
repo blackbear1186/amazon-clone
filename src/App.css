@@ -12,6 +12,7 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .amazon_logo {
   height: 40px;
@@ -20,6 +21,9 @@ body {
   padding: 1px 8px 0 6px;
 }
 .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: #22303E;
   height: 39px;
 }
@@ -40,6 +44,57 @@ body {
   flex-direction: column;
 }
 .search-box > input {
-  width: 302px;
+  width: 30em;
   height: 38px;
+  border: none;
+  background-color: #FFFFFF;
+}
+.search-box {
+  display: flex;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 7px 10px 7px 10px;
+}
+.search-icon-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F3A846;
+  height: 38px;
+  width: 40px;
+  text-align: center;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+}
+.search-icon {
+  font-size: 21px;
+  cursor: pointer;
+}
+.all {
+  display: flex;
+  align-items: center;
+  background-color: #DADADA;
+  height: 38px;
+  width: 44px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-size: 14px;
+  padding: 5px;
+  color: #000000;
+  cursor: pointer;
+}
+.drop-down-arrow {
+  font-size: 30px;
+}
+.second-nav-text {
+  color: white;
+  cursor: pointer;
+}
+.ham-div {
+  color: white;
+}
+
+.hamburger-menu {
+  font-size: 1.3em;
 }
