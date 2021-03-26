@@ -164,3 +164,14 @@ body {
   font-size: 2.3em;
   color: #FFFFFF;
 }
+/* Home page, background images */
+.home-container {
+  max-width: 1500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.main-image {
+  width: 100%;
+  min-width: 1000px;
+  /* mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,60)); */
+}
