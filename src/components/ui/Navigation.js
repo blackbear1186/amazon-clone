@@ -16,8 +16,6 @@ const Navigation = () => {
       <span className='second-nav-text'>Gift Cards</span>
       <span className='second-nav-text'>Sell</span>
       <span className='second-nav-text'>Amazon's Response to Covid-19</span>
-
-
     </nav>
   )
 }
