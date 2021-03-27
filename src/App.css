@@ -33,16 +33,27 @@ body {
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #22303E;
   height: 39px;
 }
 .ham-div {
   color: white;
+  display: flex;
+  cursor: pointer;
+  padding: .3em;
 }
+.ham-div > span {
+  margin-left: .2em;
+  position: relative;
+  top: .2em;
+}
+.ham-div:hover {
+  border: 1px solid white;
 
+}
 .hamburger-menu {
-  font-size: 1.3em;
+  font-size: 1.4em;
 }
 /* Delivery styles */
 .deliver-box {
@@ -120,6 +131,11 @@ body {
 .second-nav-text {
   color: white;
   cursor: pointer;
+  padding: .3em;
+}
+.second-nav-text:hover {
+  border: 1px solid white;
+
 }
 
 /* Sign In, Orders, and cart styles */
@@ -142,6 +158,9 @@ body {
 .order-box:hover {
   border: 1px solid white;
 
+}
+.return {
+  text-decoration: none;
 }
 .cart-box {
   display: flex;
@@ -173,5 +192,92 @@ body {
 .main-image {
   width: 100%;
   min-width: 1000px;
-  /* mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,60)); */
+  /* mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); */
+}
+/* Modal styles */
+.all-modal {
+  position: fixed;
+  height: 100%;
+  width: 365px;
+  background-color: #FFFFFF;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  /* transform: translateX(-100%); */
+
+}
+.modal-header {
+  height: 50px;
+  background-color:#22303E;
+  display: flex;
+  align-items: center;
+}
+.modal-header > h3 {
+  font-size: 1.3em;
+  color: #FFFFFF;
+  margin-left: .6em;
+
+}
+.modal-text {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.user {
+  font-size: 1.7em;
+  color: white;
+  margin-right: .5em;
+}
+.modal-text > h3 {
+  color: #FFFFFF;
+}
+.modal-container {
+  display: flex;
+  flex-direction: column;
+}
+.row-modal {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.list-group {
+  text-decoration:underline;
+}
+.modal-row-head1 {
+  display: flex;
+  align-items: center;
+  height: 42px;
+}
+.modal-row {
+  display: flex;
+  align-items: center;
+  height: 42px;
+  margin: .3em 0 .3em 0;
+}
+.modal-row:hover {
+  cursor: pointer;
+  background-color: #EAEDED;
+}
+.modal-row1 {
+  display: flex;
+  align-items: center;
+  height: 42px;
+  border-top: 1px solid #D5DBDB;
+}
+.row-modal1 {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.arrow-right {
+  font-size: 1.3em;
+  color: #c2c7c7;
+}
+.arrow-right:hover {
+  color: #121212;
 }

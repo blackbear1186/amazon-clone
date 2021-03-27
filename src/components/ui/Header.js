@@ -28,7 +28,7 @@ const Header = () => {
       </div>
       <div className="search-box">
         <div className="all">
-          <span>All</span>
+         <span>All</span>
           <RiArrowDropDownFill className="drop-down-arrow" />
         </div>
         <input className="search-input" type="text"></input>
@@ -38,7 +38,7 @@ const Header = () => {
       </div>
       <Link to="/login">
         <div className="login-box">
-          <span className="log">Hello, Sign In</span>
+          <span className="log">Hello, Berlin</span>
           <span>Account & Lists</span>
         </div>
       </Link>

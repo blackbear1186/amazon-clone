@@ -8,14 +8,14 @@ const Navigation = () => {
       <GiHamburgerMenu className='hamburger-menu'/>
       <span>All</span>
       </div>
-      <span className='second-nav-text'>Today's Deals</span>
-      <span className='second-nav-text'>Berlin's Amazon.com</span>
-      <span className='second-nav-text'>Customer Service</span>
-      <span className='second-nav-text'>Browsing History</span>
-      <span className='second-nav-text'>Buy Again</span>
-      <span className='second-nav-text'>Gift Cards</span>
-      <span className='second-nav-text'>Sell</span>
-      <span className='second-nav-text'>Amazon's Response to Covid-19</span>
+      <span className='second-nav-text'>Books</span>
+      <span className='second-nav-text'>Computers</span>
+      <span className='second-nav-text'>Find a Gift</span>
+      <span className='second-nav-text'>Shopper Toolkit</span>
+      <span className='second-nav-text'>Home Improvement</span>
+      <span className='second-nav-text'>Amazon Home</span>
+      <span className='second-nav-text'>Subscribe & Save</span>
+      <span className='second-nav-text'>Automotive</span>
     </nav>
   )
 }
