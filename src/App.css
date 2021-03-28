@@ -33,7 +33,7 @@ body {
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   background-color: #22303E;
   height: 39px;
 }
@@ -196,13 +196,17 @@ body {
 }
 /* Modal styles */
 .all-modal {
-  position: fixed;
-  height: 100%;
+  /* position: fixed;
+  height: 100vh;
   width: 365px;
-  background-color: #FFFFFF;
-  z-index: 100;
+  background-color: #FFFFFF; */
+  /* Make appear above everything else */
+  /* z-index: 100;
   top: 0;
-  left: 0;
+  left: 0; */
+  /* Make it scroll */
+  /* overflow: auto; */
+  /* position is off screen to left */
   /* transform: translateX(-100%); */
 
 }
@@ -243,9 +247,6 @@ body {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-}
-.list-group {
-  text-decoration:underline;
 }
 .modal-row-head1 {
   display: flex;

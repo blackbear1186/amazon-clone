@@ -1,21 +1,18 @@
 import React from 'react'
 import {GiHamburgerMenu} from 'react-icons/gi'
 
-const Navigation = () => {
+const Navigation = ({isOpen, setOpen}) => {
   return (
     <nav className='navbar'>
       <div className='ham-div'>
-      <GiHamburgerMenu className='hamburger-menu'/>
+      <GiHamburgerMenu className='hamburger-menu' onClick={() => setOpen(true)}/>
       <span>All</span>
       </div>
-      <span className='second-nav-text'>Books</span>
-      <span className='second-nav-text'>Computers</span>
-      <span className='second-nav-text'>Find a Gift</span>
-      <span className='second-nav-text'>Shopper Toolkit</span>
-      <span className='second-nav-text'>Home Improvement</span>
-      <span className='second-nav-text'>Amazon Home</span>
-      <span className='second-nav-text'>Subscribe & Save</span>
-      <span className='second-nav-text'>Automotive</span>
+      <span className='second-nav-text'>Today's Deals</span>
+      <span className='second-nav-text'>Customer Service</span>
+      <span className='second-nav-text'>Gift Cards</span>
+      <span className='second-nav-text'>Sell</span>
+      <span className='second-nav-text'>Registry</span>
     </nav>
   )
 }

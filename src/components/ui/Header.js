@@ -36,20 +36,20 @@ const Header = () => {
           <GoSearch className="search-icon" />
         </div>
       </div>
-      <Link to="/login">
+      <Link style={{textDecoration:'none'}}to="/login">
         <div className="login-box">
-          <span className="log">Hello, Berlin</span>
+          <span className="log">Hello, Sign In</span>
           <span>Account & Lists</span>
         </div>
       </Link>
 
-      <Link to="/login">
+      <Link style={{textDecoration:'none'}} to="/login">
         <div className="order-box">
           <span>Returns</span>
           <span>& Orders</span>
         </div>
       </Link>
-      <Link to="/check-out">
+      <Link style={{textDecoration:'none'}} to="/check-out">
         <div className="cart-box">
           <span>0</span>
           <CgShoppingCart className="cart" />

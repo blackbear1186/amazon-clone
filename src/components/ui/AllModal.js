@@ -1,98 +1,220 @@
-import React from "react";
+import React, {useState} from "react";
 import { FaUserCircle } from "react-icons/fa";
-import {RiArrowRightSLine} from 'react-icons/ri'
+import { RiArrowRightSLine, RiArrowDropDownFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
-const AllModal = () => {
+const BUTTON_WRAPPER_STYLES = {
+  position: "absolute",
+  height: "100vh",
+  width: "365px",
+  backgroundColor: "#FFFFFF",
+  zIndex: "100",
+  top: 0,
+  left: 0,
+  overflow: "auto",
+  // transform: 'translateX(-100%)',
+};
+
+const BUTTON_OTHER_STYLES = {
+  position: "fixed",
+  height: "100vh",
+  width: "365px",
+  backgroundColor: "#FFFFFF",
+  zIndex: "100",
+  top: 0,
+  left: 0,
+  overflow: "auto",
+  // transform: 'translateX(-100%)',
+};
+
+const AllModal = ({isOpen, children}) => {
+  if (!isOpen) return null
   return (
     <aside>
-      <div className="all-modal">
+      {children}
+      <div style={BUTTON_WRAPPER_STYLES}>
         <div className="modal-container">
-          <div className="modal-header">
-            <div className="modal-text">
-              <FaUserCircle className="user" />
-              <h3>Hello, Berlin</h3>
+          <Link style={{ textDecoration: "none" }} to="/login">
+            <div className="modal-header">
+              <div className="modal-text">
+                <FaUserCircle className="user" />
+                <h3>Hello, Sign In</h3>
+              </div>
             </div>
-          </div>
+          </Link>
+
           <div className="modal-row-head1">
             <div className="row-modal">
-              <h3>Trending</h3>
+              <h3>Digital Content & Devices</h3>
             </div>
           </div>
 
-          <ul>
+          <Link style={{ textDecoration: "none" }} to="/">
             <div className="modal-row">
-              <div class="row-modal">
-                <li>Best Sellers</li>
+              <div className="row-modal">
+                <span className="list-group">Amazon Music</span>
+                <RiArrowRightSLine className="arrow-right" />
               </div>
             </div>
+          </Link>
+
+          <Link style={{ textDecoration: "none" }} to="/">
             <div className="modal-row">
-              <div class="row-modal">
-                <li>New Releases</li>
+              <div className="row-modal">
+                <span className="list-group">Kindle E-readers & Books</span>
+                <RiArrowRightSLine className="arrow-right" />
               </div>
             </div>
+          </Link>
+
+          <Link style={{ textDecoration: "none" }} to="/">
             <div className="modal-row">
-              <div class="row-modal">
-                <li>Movers & Shakers</li>
+              <div className="row-modal">
+                <span>Appstore for Android</span>
+                <RiArrowRightSLine className="arrow-right" />
               </div>
             </div>
-           
-          </ul>
+          </Link>
           {/* Second box */}
           <div className="modal-row1">
-              <div className="row-modal1">
-                <h3>Digital Content & Devices</h3>
+            <div className="row-modal1">
+              <h3>Shop By Department</h3>
+            </div>
+          </div>
+          <Link style={{ textDecoration: "none" }} to="/"></Link>
+          <div className="modal-row">
+            <div className="row-modal">
+              <span>Electronics</span>
+              <RiArrowRightSLine className="arrow-right" />
+            </div>
+          </div>
+          <Link style={{ textDecoration: "none" }} to="/">
+            <div className="modal-row">
+              <div className="row-modal">
+                <span>Computers</span>
+                <RiArrowRightSLine className="arrow-right" />
               </div>
             </div>
-            <ul>
+          </Link>
+
+          <Link style={{ textDecoration: "none" }} to="/">
             <div className="modal-row">
-              <div class="row-modal">
-                <li>Prime Video</li>
-                <RiArrowRightSLine className='arrow-right'/>
+              <div className="row-modal">
+                <span>Smart Home</span>
+                <RiArrowRightSLine className="arrow-right" />
               </div>
             </div>
+          </Link>
+
+          <Link style={{ textDecoration: "none" }} to="/">
             <div className="modal-row">
-              <div class="row-modal">
-                <li>Amazon Music</li>
-                <RiArrowRightSLine className='arrow-right'/>
+              <div className="row-modal">
+                <span>Arts & Crafts</span>
+                <RiArrowRightSLine className="arrow-right" />
               </div>
             </div>
+          </Link>
+
+          <Link style={{ textDecoration: "none" }} to="/">
             <div className="modal-row">
-              <div class="row-modal">
-                <li>Echo & Alexa</li>
-                <RiArrowRightSLine className='arrow-right'/>
+              <div className="row-modal">
+                <span>See All</span>
+                <RiArrowDropDownFill />
               </div>
             </div>
+          </Link>
+
+          <div className="modal-row1">
+            <div className="row-modal1">
+              <h3>Programs & Features</h3>
+            </div>
+          </div>
+          <Link style={{ textDecoration: "none" }} to="/">
             <div className="modal-row">
-              <div class="row-modal">
-                <li>Fire Tablets</li>
-                <RiArrowRightSLine className='arrow-right'/>
+              <div className="row-modal">
+                <span>Gift Cards</span>
+                <RiArrowRightSLine className="arrow-right" />
               </div>
             </div>
+          </Link>
+
+          <Link style={{ textDecoration: "none" }} to="/">
             <div className="modal-row">
-              <div class="row-modal">
-                <li>Fire TV</li>
-                <RiArrowRightSLine className='arrow-right'/>
+              <div className="row-modal">
+                <span>#FoundItOnAmazon</span>
               </div>
             </div>
+          </Link>
+
+          <Link style={{ textDecoration: "none" }} to="/">
             <div className="modal-row">
-              <div class="row-modal">
+              <div className="row-modal">
+                <span>Amazon Live</span>
+                <RiArrowRightSLine className="arrow-right" />
+              </div>
+            </div>
+          </Link>
+
+          <Link style={{ textDecoration: "none" }} to="/">
+            <div className="modal-row">
+              <div className="row-modal">
+                <span>Internation Shopping</span>
+                <RiArrowRightSLine className="arrow-right" />
+              </div>
+            </div>
+          </Link>
+          <Link style={{ textDecoration: "none" }} to="/">
+            <div className="modal-row">
+              <div className="row-modal">
+                <span>See All</span>
+                <RiArrowDropDownFill />
+              </div>
+            </div>
+          </Link>
+          <div className="modal-row1">
+            <div className="row-modal1">
+              <h3>Help & Settings</h3>
+            </div>
+          </div>
+          <Link style={{ textDecoration: "none" }} to="/">
+            <div className="modal-row">
+              <div className="row-modal">
+                <span>Your Account</span>
+              </div>
+            </div>
+          </Link>
+          <Link style={{ textDecoration: "none" }} to="/">
+            <div className="modal-row">
+              <div className="row-modal">
+                <span>Customer Servive</span>
+              </div>
+            </div>
+          </Link>
+          <Link style={{ textDecoration: "none" }} to="/login">
+            <div className="modal-row">
+              <div className="row-modal">
+                <span>Sign In</span>
+              </div>
+            </div>
+          </Link>
+          {/* <div className="modal-row">
+              <div className="row-modal">
                 <li>Kindle E-readers & Books</li>
-                <RiArrowRightSLine className='arrow-right'/>
+                <RiArrowRightSLine className="arrow-right" />
               </div>
             </div>
             <div className="modal-row">
-              <div class="row-modal">
+              <div className="row-modal">
                 <li>Audible Books & Originals</li>
-                <RiArrowRightSLine className='arrow-right'/>
+                <RiArrowRightSLine className="arrow-right" />
               </div>
             </div>
             <div className="modal-row">
-              <div class="row-modal">
+              <div className="row-modal">
                 <li>Appstore for Android</li>
-                <RiArrowRightSLine className='arrow-right'/>
+                <RiArrowRightSLine className="arrow-right" />
               </div>
-            </div>
-            </ul>
+            </div> */}
         </div>
       </div>
     </aside>
