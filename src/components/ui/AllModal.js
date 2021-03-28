@@ -9,7 +9,7 @@ const BUTTON_WRAPPER_STYLES = {
   height: "100vh",
   width: "365px",
   backgroundColor: "#FFFFFF",
-  zIndex: "100",
+  zIndex: 100,
   top: 0,
   left: 0,
   overflow: "auto",
@@ -33,10 +33,20 @@ const CLOSE_BUTTON = {
   position: 'absolute',
   top: '14px',
   left: '372px',
-  zIndex: '100',
+  zIndex: 100,
   cursor: 'pointer',
 }
-const AllModal = ({isOpen, children}) => {
+
+const OVERLAY = {
+  position: 'fixed',
+  top: 0, 
+  right: 0,
+  bottom: 0,
+  left: 0,
+  backgroundColor: 'black',
+  zIndex: 1000
+}
+const AllModal = ({isOpen, setOpen}) => {
   if (!isOpen) return null
   return (
     <>
@@ -48,7 +58,6 @@ const AllModal = ({isOpen, children}) => {
               <div className="modal-text">
                 <FaUserCircle className="user" />
                 <h3>Hello, Sign In</h3>
-                {/* <VscChromeClose style={CLOSE_BUTTON}/> */}
               </div>
             </div>
           </Link>
@@ -229,8 +238,7 @@ const AllModal = ({isOpen, children}) => {
       </div>
     </aside>
     <main>
-      {/* <span style={CLOSE_BUTTON}>X</span> */}
-      <VscChromeClose style={CLOSE_BUTTON} />
+      <VscChromeClose style={CLOSE_BUTTON} onClick={() => setOpen(false)}/>
     </main>
   </>
   );

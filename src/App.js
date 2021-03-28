@@ -18,7 +18,7 @@ const [isOpen , setOpen] = useState(false)
       <div className="App">
         <Switch>
           <Route exact path="/">
-            <AllModal isOpen={isOpen}/>
+            <AllModal isOpen={isOpen} setOpen={setOpen}/>
 
             <Header />
             <Navigation isOpen={isOpen} setOpen={setOpen}/>
