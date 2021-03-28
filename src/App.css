@@ -282,3 +282,7 @@ body {
 .arrow-right:hover {
   color: #121212;
 }
+.close-button {
+  font-size: 1.9em;
+  color: black!important;
+}

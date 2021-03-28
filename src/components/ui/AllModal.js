@@ -1,6 +1,7 @@
-import React, {useState} from "react";
+import React from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { RiArrowRightSLine, RiArrowDropDownFill } from "react-icons/ri";
+import {VscChromeClose} from 'react-icons/vsc'
 import { Link } from "react-router-dom";
 
 const BUTTON_WRAPPER_STYLES = {
@@ -26,12 +27,20 @@ const BUTTON_OTHER_STYLES = {
   overflow: "auto",
   // transform: 'translateX(-100%)',
 };
-
+const CLOSE_BUTTON = {
+  color: 'black',
+  fontSize: '1.8em',
+  position: 'absolute',
+  top: '14px',
+  left: '372px',
+  zIndex: '100',
+  cursor: 'pointer',
+}
 const AllModal = ({isOpen, children}) => {
   if (!isOpen) return null
   return (
+    <>
     <aside>
-      {children}
       <div style={BUTTON_WRAPPER_STYLES}>
         <div className="modal-container">
           <Link style={{ textDecoration: "none" }} to="/login">
@@ -39,6 +48,7 @@ const AllModal = ({isOpen, children}) => {
               <div className="modal-text">
                 <FaUserCircle className="user" />
                 <h3>Hello, Sign In</h3>
+                {/* <VscChromeClose style={CLOSE_BUTTON}/> */}
               </div>
             </div>
           </Link>
@@ -218,6 +228,11 @@ const AllModal = ({isOpen, children}) => {
         </div>
       </div>
     </aside>
+    <main>
+      {/* <span style={CLOSE_BUTTON}>X</span> */}
+      <VscChromeClose style={CLOSE_BUTTON} />
+    </main>
+  </>
   );
 };
 
