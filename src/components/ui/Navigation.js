@@ -1,7 +1,7 @@
 import React from 'react'
 import {GiHamburgerMenu} from 'react-icons/gi'
 
-const Navigation = ({isOpen, setOpen}) => {
+const Navigation = ({setOpen}) => {
   return (
     <nav className='navbar'>
       <div className='ham-div'>

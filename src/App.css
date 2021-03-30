@@ -184,32 +184,27 @@ body {
   color: #FFFFFF;
 }
 /* Home page, background images */
-.home-container {
+.carousel-container {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  overflow-x: hidden;
   max-width: 1500px;
   margin-right: auto;
-  margin-left: auto;
+  margin-left: auto; 
+}
+.carousel-slide {
+ /* width: 100%; */
 }
 .main-image {
-  width: 100%;
-  min-width: 1000px;
-  /* mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); */
-}
-/* Modal styles */
-.all-modal {
-  /* position: fixed;
+  width: 100vw;
   height: 100vh;
-  width: 365px;
-  background-color: #FFFFFF; */
-  /* Make appear above everything else */
-  /* z-index: 100;
-  top: 0;
-  left: 0; */
-  /* Make it scroll */
-  /* overflow: auto; */
-  /* position is off screen to left */
-  /* transform: translateX(-100%); */
-
+  min-width: 1000px;
+  /* mask-image: linear-gradient(to bottom, rgba(0,0,0,1), transparent); */
 }
+
+/* Modal styles */
+
 .modal-header {
   height: 50px;
   background-color:#22303E;
@@ -285,4 +280,20 @@ body {
 .close-button {
   font-size: 1.9em;
   color: black!important;
+}
+.row-modal > span {
+  color: #121212;
+}
+.row-modal-flag {
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+.row-modal-flag > img {
+  margin-right: .6em;
+}
+.row-modal-flag > span {
+  color: #121212;
 }

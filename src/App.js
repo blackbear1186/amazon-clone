@@ -21,12 +21,12 @@ const [isOpen , setOpen] = useState(false)
             <AllModal isOpen={isOpen} setOpen={setOpen}/>
 
             <Header />
-            <Navigation isOpen={isOpen} setOpen={setOpen}/>
+            <Navigation setOpen={setOpen}/>
             <HomePage />
           </Route>
           <Route path="/check-out">
             <Header />
-            <Navigation isOpen={isOpen} setOpen={setOpen}/>
+            <Navigation setOpen={setOpen}/>
             <CheckOutPage />
           </Route>
           <Route path="/login">
