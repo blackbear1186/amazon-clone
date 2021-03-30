@@ -202,7 +202,19 @@ body {
   min-width: 1000px;
   /* mask-image: linear-gradient(to bottom, rgba(0,0,0,1), transparent); */
 }
+.left-arrow {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  font-size: 4em;
+}
+.right-arrow {
+  position: absolute;
+  top: 15%;
+  right: 0;
+  font-size: 4em;
 
+}
 /* Modal styles */
 
 .modal-header {

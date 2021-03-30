@@ -1,4 +1,5 @@
 import React from "react";
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 const HomePage = () => {
   const SliderImages = [
@@ -32,6 +33,9 @@ const HomePage = () => {
     <div className="carousel-container">
       {SliderImages.map((slide) => (
         <div className="carousel-slide">
+          <IoIosArrowForward className="right-arrow" />
+          <IoIosArrowBack className="left-arrow" />
+
           <img className="main-image" src={slide.image} alt=""></img>
         </div>
       ))}
