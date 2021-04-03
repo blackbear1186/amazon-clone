@@ -6,6 +6,9 @@ import { CgShoppingCart } from "react-icons/cg";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  // const [selected, setSelected] = useState(false)
+
+ 
   return (
     <nav className="header">
       <Link to="/">
@@ -29,8 +32,41 @@ const Header = () => {
       <div className="search-box">
         <div className="all">
          <span>All</span>
-          <RiArrowDropDownFill className="drop-down-arrow" />
+         <RiArrowDropDownFill className="drop-down-arrow" />
+
+          <select name='departments' style={{display: 'none'}}id='departments'>
+          <option value='all-departments'>All Departments</option>
+          <option value='arts-crafts'>Arts & Crafts</option>
+          <option value='arts-crafts'>Automotive</option>
+          <option value='arts-crafts'>Baby</option>
+          <option value='arts-crafts'>Beauty & Personal Care</option>
+          <option value='arts-crafts'>Books</option>
+          <option value='arts-crafts'>Computers</option>
+          <option value='arts-crafts'>Digital Music</option>
+          <option value='arts-crafts'>Electronics</option>
+          <option value='arts-crafts'>Kindle Store</option>
+          <option value='arts-crafts'>Prime Video</option>
+          <option value='arts-crafts'>Women's Fashion</option>
+          <option value='arts-crafts'>Men's Fashion</option>
+          <option value='arts-crafts'>Girls' Fashion</option>
+          <option value='arts-crafts'>Boys' Fashion</option>
+          <option value='arts-crafts'>Deals</option>
+          <option value='arts-crafts'>Health & Household</option>
+          <option value='arts-crafts'>Home & Kitchen</option>
+          <option value='arts-crafts'>Industrial & Scientific</option>
+          <option value='arts-crafts'>Luggage</option>
+          <option value='arts-crafts'>Movies & TV</option>
+          <option value='arts-crafts'>Music, CDs & Vinyl</option>
+          <option value='arts-crafts'>Pet Supplies</option>
+          <option value='arts-crafts'>Software</option>
+          <option value='arts-crafts'>Sports & Outdoors</option>
+          <option value='arts-crafts'>Tools & Home Improvement</option>
+          <option value='arts-crafts'>Video Games</option>
+
+        </select>
+
         </div>
+        
         <input className="search-input" type="text"></input>
         <div className="search-icon-div">
           <GoSearch className="search-icon" />

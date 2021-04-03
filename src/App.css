@@ -185,21 +185,91 @@ body {
 }
 /* Home page, background images */
 .carousel-container {
-  position: relative;
   display: flex;
+  justify-content: center;
   height: 100vh;
   overflow-x: hidden;
   max-width: 1500px;
   margin-right: auto;
   margin-left: auto; 
+  background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_45M_v2_2x._CB432458382_.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,.9));
 }
-.carousel-slide {
- /* width: 100%; */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 21em;
+  width: 96%;
+  min-width: 1000px;
+}
+.second-bx {
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5em;
+  padding: .8em;
+}
+
+.card-container {
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5em;
+}
+.card {
+  height: 400px;
+  background-color: #FFFFFF;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+.card-content {
+  height: 100%;
+  width: 90%;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  /* background-color: black; */
+}
+.card-content > img {
+  width: 98%;
+  height: 270px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card-content > h2 {
+  text-align: left;
+  margin: 1em 0 1em 0;
+}
+.card-link  {
+  text-align: left;
+  margin-top: .5em;
+}
+.cardAd {
+  height: 400px;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+.card-contentAd {
+  width: 98%;
+  text-align: center;
+}
+.card-sign-in {
+  height: 130px;
+  margin-top: 1em;
+  background-color: #FFFFFF;
+}
+.button > button {
+  width: 10em;
 }
 .main-image {
-  width: 100vw;
+  /* width: 100vw;
   height: 100vh;
   min-width: 1000px;
+  z-index: 20; */
   /* mask-image: linear-gradient(to bottom, rgba(0,0,0,1), transparent); */
 }
 .left-arrow {
@@ -207,13 +277,14 @@ body {
   top: 15%;
   left: 0;
   font-size: 4em;
+  cursor: pointer;
 }
 .right-arrow {
   position: absolute;
   top: 15%;
   right: 0;
   font-size: 4em;
-
+  cursor: pointer;
 }
 /* Modal styles */
 
