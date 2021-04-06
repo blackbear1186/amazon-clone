@@ -97,13 +97,16 @@ const HomeGrid = () => {
       </div>
       <div className="cardAd">
         <div className="card-contentAd">
-          <img style={{height: '250px'}}src={amazonbasics[5].image} alt="" />
-          <div className='card-sign-in'>
+          <img style={{ height: "250px" }} src={amazonbasics[5].image} alt="" />
+          <div className="card-sign-in">
             <h2>Sign in for the best experience</h2>
-            <button style={{width: '10em'}} type='button'>Sign in securely</button>
+            <Link to="/login">
+              <div>
+                <button type='button' className="login-button">Sign in securely</button>
+              </div>
+            </Link>
+          </div>
         </div>
-        </div>
-        
       </div>
       <div className="card">
         <div className="card-content">

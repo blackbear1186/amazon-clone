@@ -7,6 +7,7 @@ import LoginPage from "./components/pages/LoginPage";
 import Header from "./components/ui/Header";
 import Navigation from "./components/ui/Navigation";
 import AllModal from "./components/ui/AllModal";
+import RegisterPage from './components/pages/RegisterPage'
 
 function App() {
 
@@ -31,6 +32,9 @@ const [isOpen , setOpen] = useState(false)
           </Route>
           <Route path="/login">
             <LoginPage />
+          </Route>
+          <Route path='/register'>
+            <RegisterPage />
           </Route>
         </Switch>
       </div>
