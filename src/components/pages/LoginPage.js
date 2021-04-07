@@ -19,17 +19,23 @@ const LoginPage = () => {
           <div className="form-container">
             <h2>Sign In</h2>
             <form>
-              <label for="login-input">
-                <span className="label-sign">
-                  <strong>Email or mobile phone number</strong>
-                </span>
-              </label>
-              <br></br>
-              <input name="login-input" className="login-input" autoFocus />
-              <br></br>
-              <button className="sign-button" type="submit">
-                Continue
-              </button>
+              <div className="row">
+                <label for="login-input">
+                  <span className="label-sign">
+                    <strong>Email or mobile phone number</strong>
+                  </span>
+                </label>
+                <input name="login-input" className="login-input" autoFocus />
+              </div>
+              <div className='row'>
+                <label for='password'><strong>Password</strong></label>
+                <input name='password' className='login-input'/>
+              </div>
+              <div className="row">
+                <button className="sign-button" type="submit">
+                  Continue
+                </button>
+              </div>
             </form>
             <span>
               By continuing, you agree to Amazon's{" "}
@@ -40,7 +46,7 @@ const LoginPage = () => {
         </div>
         <div className="create-account">
           <span>New to Amazon?</span>
-          <Link to="/register">
+          <Link style={{ textDecoration: "none" }} to="/register">
             <button className="create-button" type="submit">
               Create your Amazon account
             </button>
