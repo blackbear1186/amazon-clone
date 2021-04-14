@@ -56,8 +56,8 @@ const RegisterPage = () => {
               <div className="row">
                 <span>
                   By continuing, you agree to Amazon's{" "}
-                  <a href="#">Conditions of Use </a> and
-                  <a href="#"> Privacy Notice.</a>
+                  <a href=" ">Conditions of Use </a> and
+                  <a href=" "> Privacy Notice.</a>
                 </span>
               </div>
             </form>

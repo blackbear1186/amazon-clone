@@ -2,6 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const LoginPage = () => {
+
+  const handleLogin = e => {
+    e.preventDefault();
+    
+  }
+
   return (
     <>
       <div className="logo-container">
@@ -32,15 +38,15 @@ const LoginPage = () => {
                 <input name='password' className='login-input'/>
               </div>
               <div className="row">
-                <button className="sign-button" type="submit">
+                <button onClick={handleLogin} className="sign-button" type="submit">
                   Continue
                 </button>
               </div>
             </form>
             <span>
               By continuing, you agree to Amazon's{" "}
-              <a href="#">Conditions of Use </a> and
-              <a href="#"> Privacy Notice.</a>
+              <Link to='/'>Conditions of Use </Link> and
+              <Link to='/'> Privacy Notice.</Link>
             </span>
           </div>
         </div>
