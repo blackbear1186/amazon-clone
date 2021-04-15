@@ -1,13 +1,14 @@
-import React from "react";
+import React, {useContext} from "react";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { GoSearch } from "react-icons/go";
 import { RiArrowDropDownFill } from "react-icons/ri";
 import { CgShoppingCart } from "react-icons/cg";
 import { Link } from "react-router-dom";
+import {AppContext} from '../../AppContext'
 
 const Header = () => {
   // const [selected, setSelected] = useState(false)
-
+  const {products} = useContext(AppContext)
  
   return (
     <nav className="header">
@@ -87,7 +88,7 @@ const Header = () => {
       </Link>
       <Link style={{textDecoration:'none'}} to="/check-out">
         <div className="cart-box">
-          <span>0</span>
+          <span>{products.length}</span>
           <CgShoppingCart className="cart" />
         </div>
       </Link>

@@ -9,43 +9,50 @@ import Navigation from "./components/ui/Navigation";
 import AllModal from "./components/ui/AllModal";
 import RegisterPage from "./components/pages/RegisterPage";
 import TodaysDeals from "./components/pages/TodaysDeals";
+import { AppProvider } from "./AppContext";
+import products from './products'
+import ProductList from "./ProductList";
 
 function App() {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <Router>
-      <div className="App">
-        <Switch>
-          <Route exact path="/">
-            <AllModal isOpen={isOpen} setOpen={setOpen} />
+    <AppProvider>
+      <Router>
+        <div className="App">
+          <Switch>
+            <Route exact path="/">
+              <AllModal isOpen={isOpen} setOpen={setOpen} />
 
-            <Header />
-            <Navigation setOpen={setOpen} />
-            <HomePage />
-          </Route>
+              <Header />
+              <Navigation setOpen={setOpen} />
+              <HomePage />
+            </Route>
 
-          <Route path="/check-out">
-            <Header />
-            <Navigation setOpen={setOpen} />
-            <CheckOutPage />
-          </Route>
-          <Route path="/login">
-            <LoginPage />
-          </Route>
-          <Route path="/register">
-            <RegisterPage />
-          </Route>
-          <Route path="/today-deal">
-            <AllModal isOpen={isOpen} setOpen={setOpen} />
+            <Route path="/check-out">
+              <Header />
+              <Navigation setOpen={setOpen} />
+              <CheckOutPage />
+            </Route>
+            <Route path="/login">
+              <LoginPage />
+            </Route>
+            <Route path="/register">
+              <RegisterPage />
+            </Route>
+            <Route path="/today-deal">
+              <AllModal isOpen={isOpen} setOpen={setOpen} />
 
-            <Header />
-            <Navigation setOpen={setOpen} />
-            <TodaysDeals />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+              <Header />
+              <Navigation setOpen={setOpen} />
+              
+              <TodaysDeals />
+              <ProductList products={products}/>
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    </AppProvider>
   );
 }
 
