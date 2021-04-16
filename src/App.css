@@ -561,3 +561,68 @@ body {
   text-align: left;
   margin-bottom: 3em;
 }
+/* CHECK OUT PAGE STYLES */
+.check-container {
+  width: 100%;
+  min-width: 960px;
+  height: 100vh;
+  background-color: #EAEDED;
+  display: flex;
+  margin: auto;
+}
+.cart-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  border-top: 1px solid #DADADA;
+  border-bottom: 1px solid #DADADA;
+  padding: 1em 0 1em 0;
+}
+.section {
+  width: 87%;
+  height: 400px;
+  margin: 2em 1em 1.5em 1em;
+  background-color: #FFFFFF;
+
+}
+.aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  height: 100px;
+  text-align: center;
+  margin: 1em 1em 1em 0;
+  background-color: #FFFFFF;
+}
+.aside > div  {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.checkout-product {
+  width: 96%;
+  margin:auto;
+}
+.cart-subtotal {
+  text-align: right;
+  padding-top: .5em;
+}
+.shop-header {
+  margin: 1em 0 1em 0;
+}
+.proceed-button {
+  background-color: #F7CB00;
+  border-radius: 5px;
+  border: none;
+  padding: .6em;
+  width: 100%;
+  margin-top: .5em;
+}
+.proceed-button:hover {
+  cursor: pointer;
+  background-color: #ecc208;
+  
+}

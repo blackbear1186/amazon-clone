@@ -8,9 +8,8 @@ import Header from "./components/ui/Header";
 import Navigation from "./components/ui/Navigation";
 import AllModal from "./components/ui/AllModal";
 import RegisterPage from "./components/pages/RegisterPage";
-import TodaysDeals from "./components/pages/TodaysDeals";
 import { AppProvider } from "./AppContext";
-import products from './products'
+import products from "./products";
 import ProductList from "./ProductList";
 
 function App() {
@@ -42,12 +41,15 @@ function App() {
             </Route>
             <Route path="/today-deal">
               <AllModal isOpen={isOpen} setOpen={setOpen} />
-
               <Header />
               <Navigation setOpen={setOpen} />
-              
-              <TodaysDeals />
-              <ProductList products={products}/>
+              <ProductList products={products} />
+            </Route>
+            <Route path="/checkout">
+              <AllModal isOpen={isOpen} setOpen={setOpen} />
+              <Header />
+              <Navigation setOpen={setOpen} />
+              <CheckOutPage />
             </Route>
           </Switch>
         </div>
