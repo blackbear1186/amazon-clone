@@ -4,15 +4,31 @@ import CheckOut from './CheckOut'
 
 const CheckOutPage = () => {
   const { products, dispatch } = useContext(AppContext);
-  const product = products.map(product => ({...product}));
-  return (
+  const emptyImage = 'https://m.media-amazon.com/images/G/01/cart/empty/kettle-desaturated._CB445243794_.svg';
+
+  const totalAmount = products.reduce((total, product) => {
+    return (
+      total += product.price
+    )
+  }, 0)
+  const totalCart = products.length;  
+  const emptyCart = (
+    <div className='empty-cart-container'>
+      <img style={{height: '150px'}}src={emptyImage} alt=''/>
+      <div>
+      <h1>Your Amazon Cart is empty</h1>
+      </div>
+    </div>
+    
+  )
+  const fullCart = (
     <div className="check-container">
-      <section className="section">
+    <section className="section">
         <div className="checkout-product">
-          <div>
+          <div className='shopping-cart'>
             <h1 className="shop-header">Shopping Cart</h1>
           </div>
-          <div className='cart-container'>
+          <div>
               {products.map((product) => (
                 <CheckOut 
                 {...product}
@@ -20,13 +36,13 @@ const CheckOutPage = () => {
               ))}
           </div>
           <div className='cart-subtotal'>
-            <span>Subtotal (1 item): $0</span>
+            <span>Subtotal : ${totalAmount}</span>
           </div>
         </div>
       </section>
       <aside className="aside">
         <div>
-        <span className='sub-span'>Subtotal (1 item): $0 </span>
+        <span className='sub-span'>Subtotal ({totalCart} item): ${totalAmount} </span>
 
         </div>
         <div>
@@ -35,7 +51,9 @@ const CheckOutPage = () => {
         </div>
       </aside>
     </div>
-  );
+
+  )
+  return <>{products.length === 0 ? emptyCart : fullCart} </>
 };
 
 export default CheckOutPage;
