@@ -18,14 +18,14 @@ const CheckOut = ({id, image, text, price, stars}) => {
       <div>
       <img className='deal-image' src={image} alt=''/>
       </div>
-      <div>
+      <div style={{marginLeft: '2em'}}>
         <div>
         <span>{text}</span>
 
         </div>
         <button className='delete-button' onClick={handleDelete} type='button'>Delete</button>
       </div>
-      <div><span>${price}</span></div>
+      <div><span style={{marginLeft: '1em'}}>${price}</span></div>
       </div>
     </div>
   )

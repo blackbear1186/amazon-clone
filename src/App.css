@@ -566,9 +566,9 @@ body {
   width: 100%;
   min-width: 960px;
   height: 100vh;
-  background-color: #EAEDED;
   display: flex;
   margin: auto;
+  background-color: #DADADA;
   
 }
 .cart-container {
@@ -577,10 +577,11 @@ body {
   margin-bottom: 1em;
   border-bottom: 1px solid #DADADA;
   padding: 1em 0 1em 0;
+  background-color: #FFFFFF;
 }
 .section {
   width: 87%;
-  height: 400px;
+  height: 96% auto;
   margin: 2em 1em 1.5em 1em;
   background-color: #FFFFFF;
   

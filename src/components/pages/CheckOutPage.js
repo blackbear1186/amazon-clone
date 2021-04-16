@@ -8,7 +8,7 @@ const CheckOutPage = () => {
 
   const totalAmount = products.reduce((total, product) => {
     return (
-      total += product.price
+      total += parseFloat(product.price)
     )
   }, 0)
   const totalCart = products.length;  
@@ -28,13 +28,11 @@ const CheckOutPage = () => {
           <div className='shopping-cart'>
             <h1 className="shop-header">Shopping Cart</h1>
           </div>
-          <div>
               {products.map((product) => (
                 <CheckOut 
                 {...product}
                 />                 
               ))}
-          </div>
           <div className='cart-subtotal'>
             <span>Subtotal : ${totalAmount}</span>
           </div>
