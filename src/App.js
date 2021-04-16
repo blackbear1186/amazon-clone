@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./components/pages/HomePage";
 import CheckOutPage from "./components/pages/CheckOutPage";
+import CheckOut from './components/pages/CheckOut'
 import LoginPage from "./components/pages/LoginPage";
 import Header from "./components/ui/Header";
 import Navigation from "./components/ui/Navigation";
@@ -50,6 +51,7 @@ function App() {
               <Header />
               <Navigation setOpen={setOpen} />
               <CheckOutPage />
+              <CheckOut />
             </Route>
           </Switch>
         </div>

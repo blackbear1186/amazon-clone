@@ -569,6 +569,7 @@ body {
   background-color: #EAEDED;
   display: flex;
   margin: auto;
+  
 }
 .cart-container {
   display: flex;
@@ -582,7 +583,7 @@ body {
   height: 400px;
   margin: 2em 1em 1.5em 1em;
   background-color: #FFFFFF;
-
+  
 }
 .aside {
   display: flex;
