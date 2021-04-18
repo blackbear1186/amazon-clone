@@ -3,7 +3,7 @@ import { AppContext } from "../../AppContext";
 import CheckOut from './CheckOut'
 
 const CheckOutPage = () => {
-  const { products, dispatch } = useContext(AppContext);
+  const { products } = useContext(AppContext);
   const emptyImage = 'https://m.media-amazon.com/images/G/01/cart/empty/kettle-desaturated._CB445243794_.svg';
 
   const totalAmount = products.reduce((total, product) => {

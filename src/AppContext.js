@@ -14,6 +14,11 @@ export const AppReducer = (state, action) => {
           ...state,
           products: state.products.filter(product => product.id !== action.payload)
         }
+    case 'SET_USER':
+      return {
+        ...state,
+        user: action.user
+      }
       default:
         return state;
   }
@@ -21,7 +26,8 @@ export const AppReducer = (state, action) => {
 
 //1.
 const initialstate = {
-  products: []
+  products: [],
+  user: []
 }
 //2.
 export const AppContext = createContext(initialstate);
@@ -34,6 +40,7 @@ export const AppProvider = ({children}) => {
     <AppContext.Provider
       value={{
         products: state.products,
+        user: state.user,
         dispatch,
       }}>
         {children}

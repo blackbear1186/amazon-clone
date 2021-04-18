@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./components/pages/HomePage";
 import CheckOutPage from "./components/pages/CheckOutPage";
@@ -12,10 +12,38 @@ import RegisterPage from "./components/pages/RegisterPage";
 import { AppProvider } from "./AppContext";
 import products from "./products";
 import ProductList from "./ProductList";
+import {AppContext} from './AppContext'
+import {auth} from './firebase'
 
 function App() {
   const [isOpen, setOpen] = useState(false);
+  const {user, dispatch} = useContext(AppContext)
 
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(authUser => {
+      if(authUser) {
+        // The user is logged in
+
+        dispatch({
+          type: 'SET_USER',
+          payload: user
+        })
+      } 
+      else {
+        // The user is logged out
+        dispatch({
+          type: 'SET_USER',
+          user: null,
+        })
+      }
+    })
+    return () => {
+      // clean up operation
+      unsubscribe()
+    }
+  }, [])
+
+  console.log(user)
   return (
     <AppProvider>
       <Router>

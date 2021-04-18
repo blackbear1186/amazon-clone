@@ -3,13 +3,20 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 import { GoSearch } from "react-icons/go";
 import { RiArrowDropDownFill } from "react-icons/ri";
 import { CgShoppingCart } from "react-icons/cg";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import {AppContext} from '../../AppContext'
+import {auth} from '../../firebase'
 
 const Header = () => {
   // const [selected, setSelected] = useState(false)
-  const {products} = useContext(AppContext)
- 
+  const {products, user} = useContext(AppContext)
+  const history = useHistory()
+  const login = () => {
+    if(user){
+      auth.signOut()
+      history.push('/login')
+    }
+  }
   return (
     <nav className="header">
       <Link to="/">
@@ -73,10 +80,11 @@ const Header = () => {
           <GoSearch className="search-icon" />
         </div>
       </div>
-      <Link style={{textDecoration:'none'}}to="/login">
-        <div className="login-box">
-          <span className="log">Hello, Sign In</span>
-          <span>Account & Lists</span>
+      <Link style={{textDecoration:'none'}}to={!user && '/login'}>
+        <div onClick={login} className="login-box">
+          {/* <span className="log">Hello {user?.email}, Sign In</span> */}
+          <span className='log'>{user ? "Sign Out" : "Sign In" }</span>
+          {/* <span>Account & Lists</span> */}
         </div>
       </Link>
 

@@ -219,24 +219,7 @@ const AllModal = ({ isOpen, setOpen }) => {
                 </div>
               </div>
             </Link>
-            {/* <div className="modal-row">
-              <div className="row-modal">
-                <li>Kindle E-readers & Books</li>
-                <RiArrowRightSLine className="arrow-right" />
-              </div>
-            </div>
-            <div className="modal-row">
-              <div className="row-modal">
-                <li>Audible Books & Originals</li>
-                <RiArrowRightSLine className="arrow-right" />
-              </div>
-            </div>
-            <div className="modal-row">
-              <div className="row-modal">
-                <li>Appstore for Android</li>
-                <RiArrowRightSLine className="arrow-right" />
-              </div>
-            </div> */}
+           
           </div>
         </div>
       </aside>
