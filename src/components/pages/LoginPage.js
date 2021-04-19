@@ -32,13 +32,6 @@ const LoginPage = () => {
       }).catch(e => alert(e.message))
   }
 
-  const handleRegisterUser = e => {
-    e.preventDefault();
-    auth.createUserWithEmailAndPassword(email, password)
-      .then(auth => {
-        history.push('/')
-      }).catch(e => alert(e.message))
-  }
   return (
     <>
       <div className="logo-container">
@@ -84,7 +77,7 @@ const LoginPage = () => {
         <div className="create-account">
           <span>New to Amazon?</span>
           <Link style={{ textDecoration: "none" }} to="/register">
-            <button className="create-button" onClick={handleRegisterUser} type="submit">
+            <button className="create-button" type="submit">
               Create your Amazon account
             </button>
           </Link>

@@ -1,7 +1,22 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, {useState} from "react";
+import { Link, useHistory } from "react-router-dom";
+import { auth } from '../../firebase'
 
 const RegisterPage = () => {
+  const history = useHistory()
+
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+
+  const handleRegisterUser = e => {
+    e.preventDefault();
+    auth.createUserWithEmailAndPassword(email, password)
+      .then(auth => {
+        history.push('/')
+      }).catch(e => alert(e.message))
+  }
+
   return (
     <>
       <div className="logo-container">
@@ -19,37 +34,38 @@ const RegisterPage = () => {
           <div className="form-container">
             <h2>Create account</h2>
             <form>
-              <div className="row">
+              {/* <div className="row">
                 <label for="name">
                   <strong>Your name</strong>
                 </label>
                 <input id="name" className="login-input" autoFocus />
-              </div>
+              </div> */}
               <div className="row">
                 <label for="name">
                   <strong>Email</strong>
                 </label>
-                <input id="name" className="login-input" />
+                <input id="name" value={email} onChange={(e) => setEmail(e.target.value)} className="login-input" />
               </div>
               <div className="row">
-                <label for="name">
+                <label for="password">
                   <strong>Password</strong>
                 </label>
                 <input
-                  id="name"
+                  id="password"
+                  value={password} onChange={(e) => setPassword(e.target.value)}
                   className="login-input"
                   placeholder="At least 6 characters"
                 />
                 <span>Passwords must be at least 6 characters</span>
               </div>
-              <div className="row">
+              {/* <div className="row">
                 <label for="name">
                   <strong>Re-enter password</strong>
                 </label>
                 <input id="name" className="login-input" />
-              </div>
+              </div> */}
               <div className="row">
-                <button className="register-button" type="submit">
+                <button className="register-button" onClick={handleRegisterUser} type="submit">
                   Create your Amazon account
                 </button>
               </div>

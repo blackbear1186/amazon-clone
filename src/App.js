@@ -18,7 +18,6 @@ import {auth} from './firebase'
 function App() {
   const [isOpen, setOpen] = useState(false);
   const {user, dispatch} = useContext(AppContext)
-
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(authUser => {
       if(authUser) {
@@ -26,7 +25,7 @@ function App() {
 
         dispatch({
           type: 'SET_USER',
-          payload: user
+          authUser: user
         })
       } 
       else {

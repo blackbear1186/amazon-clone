@@ -27,7 +27,7 @@ export const AppReducer = (state, action) => {
 //1.
 const initialstate = {
   products: [],
-  user: []
+  user: null
 }
 //2.
 export const AppContext = createContext(initialstate);
